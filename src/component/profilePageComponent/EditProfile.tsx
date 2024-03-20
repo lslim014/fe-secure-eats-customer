@@ -1,9 +1,13 @@
 import { HStack, VStack, Text, Heading, Input } from "native-base";
 import CustomButton from "../../common/CustomButton";
 
+interface Props {
+    setEditProfile:any
+}
+
 export default function EditProfile(
     {setEditProfile}
-    :{setEditProfile:any})
+    :Props)
 {
     return (
         <VStack backgroundColor="#FFFAF3">

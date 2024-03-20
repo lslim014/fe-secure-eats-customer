@@ -1,9 +1,12 @@
 import { HStack, VStack, Button , Text, Heading, ScrollView } from "native-base";
 import CustomButton from "../../common/CustomButton";
-export default function ViewProfile(
-    {editProfile, setEditProfile}:
-    {editProfile:Boolean, setEditProfile:any}
-    )
+
+interface Props{
+    editProfile:Boolean, 
+    setEditProfile:any
+}
+
+export default function ViewProfile({editProfile, setEditProfile}:Props)
 {
     return (
         <VStack backgroundColor="#FFFAF3">
