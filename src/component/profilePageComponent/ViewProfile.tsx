@@ -1,6 +1,9 @@
 import { HStack, VStack, Button , Text, Heading, ScrollView } from "native-base";
 import CustomButton from "../../common/CustomButton";
-export default function ViewProfile()
+export default function ViewProfile(
+    {editProfile, setEditProfile}:
+    {editProfile:Boolean, setEditProfile:any}
+    )
 {
     return (
         <VStack backgroundColor="#FFFAF3">
@@ -20,7 +23,7 @@ export default function ViewProfile()
                         <Text>Address: Home</Text>
                         <br/>
                     </VStack>
-                    <CustomButton backgroundColor='#0D99FF' onPress={() => { } } buttonTitle={"Edit"} />
+                    <CustomButton backgroundColor='#0D99FF' onPress={() => {setEditProfile(true)} } buttonTitle={"Edit"} />
                 </HStack>
             </VStack>
         </VStack>

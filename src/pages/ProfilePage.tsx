@@ -1,17 +1,24 @@
-import { HStack, VStack, Button , Text, Heading, ScrollView } from "native-base";
+import { ScrollView } from "native-base";
 import SecureEatsHeader from "../common/SecureEatsHeader";
 import SecureEatsfooter from "../common/SecureEatsFooter";
-import CustomButton from "../common/CustomButton";
 import ViewProfile from "../component/profilePageComponent/ViewProfile";
 import EditProfile from "../component/profilePageComponent/EditProfile";
+import { useState } from "react";
 
 export default function ProfilePage()
 {
+    const [editProfile, setEditProfile] = useState(false);
     return (
         <ScrollView>
             <SecureEatsHeader/>
-                <ViewProfile/>
-                <EditProfile/>
+                {editProfile?
+                <EditProfile
+                    setEditProfile = {setEditProfile}
+                /> 
+                :<ViewProfile
+                    editProfile = {editProfile}
+                    setEditProfile = {setEditProfile}
+                />}
             <SecureEatsfooter/>
         </ScrollView>
     )
