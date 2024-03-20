@@ -6,11 +6,11 @@ export default function SecureEatsHeader()
     const navigate = useNavigate();
 
     const goToProfile = () => {
-        navigate("/secure-eats/profile"); // Navigate to the ProfilePage
+        navigate("/secure-eats/profile");
     };
 
     const goToCustomerReview = () => {
-        navigate("/secure-eats/customer-review"); // Navigate to the ProfilePage
+        navigate("/secure-eats/customer-review");
     };
     
     return (

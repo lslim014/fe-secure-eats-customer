@@ -1,5 +1,6 @@
-import { HStack, VStack, Button , Text, Heading, ScrollView } from "native-base";
+import { HStack, VStack, Text, Heading } from "native-base";
 import CustomButton from "../../common/CustomButton";
+import { useNavigate } from "react-router-dom";
 
 interface Props{
     editProfile:Boolean, 
@@ -8,12 +9,16 @@ interface Props{
 
 export default function ViewProfile({editProfile, setEditProfile}:Props)
 {
+    const navigate = useNavigate();
+    const goToCustomerReview = () => {
+        navigate("/secure-eats/customer-review");
+    };
     return (
         <VStack backgroundColor="#FFFAF3">
             <VStack m="10">
                 <HStack pb={5} pr={5} space={4} alignItems="center" display="flex" justifyContent="space-between">
                     <Heading size='lg'>Profile</Heading>
-                    <CustomButton backgroundColor='#F24822' onPress={() => { } } buttonTitle={"My Reviews"} />
+                    <CustomButton backgroundColor='#F24822' onPress={() => {goToCustomerReview()} } buttonTitle={"My Reviews"} />
                 </HStack>
                 <HStack space={4} p={5} alignItems="flex-start" display="flex" justifyContent="space-between" backgroundColor="#FFFFFF" >
                     <VStack>
