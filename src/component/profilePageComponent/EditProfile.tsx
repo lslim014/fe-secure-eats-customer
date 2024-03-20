@@ -1,4 +1,4 @@
-import { HStack, VStack, Button , Text, Heading, ScrollView, Input } from "native-base";
+import { HStack, VStack, Text, Heading, Input } from "native-base";
 import CustomButton from "../../common/CustomButton";
 
 export default function EditProfile(
