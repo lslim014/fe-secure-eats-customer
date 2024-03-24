@@ -1,6 +1,3 @@
-export default function RestaurantReviewPage()
-{
-    return (
-        <div> RestaurantReviewPage</div>
-    )
+export default function RestaurantReviewPage() {
+  return <div> RestaurantReviewPage</div>;
 }
